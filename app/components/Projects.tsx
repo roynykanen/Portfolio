@@ -5,12 +5,12 @@ import ProjectCard from "./ProjectCard";
 import { projects } from "../data/projects";
 import type { Project } from "../data/projects";
 
-const filters: { label: string; value: Project["category"] | "all" }[] = [
-  { label: "All", value: "all" },
-  { label: "Mobile", value: "mobile" },
-  { label: "Web", value: "web" },
-  { label: "UX/UI", value: "ux" },
-  { label: "Other", value: "other" },
+const filters: { label: string; value: Project["category"] | "all"; activeClass: string }[] = [
+  { label: "All", value: "all", activeClass: "bg-[#c88a6f] text-[#1d1d1d] shadow-[#c88a6f]/20" },
+  { label: "Mobile", value: "mobile", activeClass: "bg-[#0d1e2e] text-[#5b9bd5] border border-[#5b9bd5]/40 shadow-[#5b9bd5]/10" },
+  { label: "Web", value: "web", activeClass: "bg-[#0d1f15] text-[#5ab87a] border border-[#5ab87a]/40 shadow-[#5ab87a]/10" },
+  { label: "UX/UI", value: "ux", activeClass: "bg-[#1a0f2e] text-[#a07ed4] border border-[#a07ed4]/40 shadow-[#a07ed4]/10" },
+  { label: "Other", value: "other", activeClass: "bg-[#281e08] text-[#d4a44c] border border-[#d4a44c]/40 shadow-[#d4a44c]/10" },
 ];
 
 export default function Projects() {
@@ -50,7 +50,7 @@ export default function Projects() {
               onClick={() => setActive(f.value)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 active === f.value
-                  ? "bg-[#c88a6f] text-[#1d1d1d] shadow-lg shadow-[#c88a6f]/20"
+                  ? `shadow-lg ${f.activeClass}`
                   : "bg-[#dedcd5]/5 text-[#8c9484] hover:text-[#dedcd5] border border-[#dedcd5]/10 hover:border-[#dedcd5]/20"
               }`}
             >

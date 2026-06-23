@@ -5,10 +5,10 @@ import { ExternalLink, Code2 } from "lucide-react";
 import type { Project } from "../data/projects";
 
 const categoryColors: Record<Project["category"], string> = {
-  mobile: "text-[#4a5245] bg-[#1a1e19] border-[#4a5245]/60",
-  web: "text-[#7a3f28] bg-[#1e0d06] border-[#7a3f28]/60",
-  ux: "text-[#5c5a55] bg-[#181715] border-[#5c5a55]/50",
-  other: "text-[#4e5449] bg-[#191c18] border-[#4e5449]/50",
+  mobile: "text-[#5b9bd5] bg-[#0d1e2e] border-[#5b9bd5]/40",
+  web: "text-[#5ab87a] bg-[#0d1f15] border-[#5ab87a]/40",
+  ux: "text-[#a07ed4] bg-[#1a0f2e] border-[#a07ed4]/40",
+  other: "text-[#d4a44c] bg-[#281e08] border-[#d4a44c]/40",
 };
 
 const categoryLabels: Record<Project["category"], string> = {
