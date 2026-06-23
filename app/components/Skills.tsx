@@ -35,10 +35,10 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-indigo-400 text-sm font-medium tracking-widest uppercase">
+          <span className="text-[#c88a6f] text-sm font-medium tracking-widest uppercase">
             Skills
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 text-[#dedcd5]">
             What I work with
           </h2>
         </motion.div>
@@ -51,16 +51,16 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.07] hover:border-indigo-500/30 transition-all duration-300"
+              className="p-6 rounded-2xl bg-[#dedcd5]/[0.03] border border-[#dedcd5]/[0.07] hover:border-[#c88a6f]/30 transition-all duration-300"
             >
-              <h3 className="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-4">
+              <h3 className="text-sm font-semibold text-[#c88a6f] uppercase tracking-wider mb-4">
                 {group.label}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-sm rounded-full bg-white/5 text-gray-300"
+                    className="px-3 py-1 text-sm rounded-full bg-[#dedcd5]/5 text-[#8c9484]"
                   >
                     {skill}
                   </span>

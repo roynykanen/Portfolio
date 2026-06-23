@@ -5,10 +5,10 @@ import { ExternalLink, Code2 } from "lucide-react";
 import type { Project } from "../data/projects";
 
 const categoryColors: Record<Project["category"], string> = {
-  mobile: "text-emerald-300 bg-emerald-950/80 border-emerald-700/50",
-  web: "text-blue-300 bg-blue-950/80 border-blue-700/50",
-  ux: "text-purple-300 bg-purple-950/80 border-purple-700/50",
-  other: "text-amber-300 bg-amber-950/80 border-amber-700/50",
+  mobile: "text-[#8c9484] bg-[#8c9484]/10 border-[#8c9484]/30",
+  web: "text-[#c88a6f] bg-[#c88a6f]/10 border-[#c88a6f]/30",
+  ux: "text-[#dedcd5]/60 bg-[#dedcd5]/5 border-[#dedcd5]/15",
+  other: "text-[#8c9484]/70 bg-[#8c9484]/8 border-[#8c9484]/20",
 };
 
 const categoryLabels: Record<Project["category"], string> = {
@@ -25,7 +25,7 @@ export default function ProjectCard({
   project: Project;
   index: number;
 }) {
-  const isCode2 = project.link.includes("github.com");
+  const isGithub = project.link.includes("github.com");
 
   return (
     <motion.div
@@ -33,10 +33,9 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.06 }}
-      className="group flex flex-col rounded-2xl bg-white/[0.03] border border-white/[0.07] hover:border-indigo-500/30 overflow-hidden card-hover"
+      className="group flex flex-col rounded-2xl bg-[#dedcd5]/[0.03] border border-[#dedcd5]/[0.07] hover:border-[#c88a6f]/30 overflow-hidden card-hover"
     >
-      {/* Image */}
-      <div className="relative h-52 bg-gradient-to-br from-indigo-900/30 to-purple-900/20 overflow-hidden">
+      <div className="relative h-52 bg-gradient-to-br from-[#c88a6f]/10 to-[#8c9484]/10 overflow-hidden">
         {project.image ? (
           <Image
             src={project.image}
@@ -55,7 +54,7 @@ export default function ProjectCard({
             </span>
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1d1d1d] via-transparent to-transparent" />
         <span
           className={`absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full border font-medium ${
             categoryColors[project.category]
@@ -65,39 +64,36 @@ export default function ProjectCard({
         </span>
       </div>
 
-      {/* Content */}
       <div className="flex flex-col flex-1 p-6">
-        <p className="text-xs text-gray-500 mb-1 uppercase tracking-wider">
+        <p className="text-xs text-[#8c9484]/60 mb-1 uppercase tracking-wider">
           {project.subtitle}
         </p>
-        <h3 className="text-lg font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
+        <h3 className="text-lg font-bold text-[#dedcd5] mb-3 group-hover:text-[#c88a6f] transition-colors">
           {project.title}
         </h3>
-        <p className="text-sm text-gray-400 leading-relaxed mb-5 flex-1">
+        <p className="text-sm text-[#8c9484] leading-relaxed mb-5 flex-1">
           {project.description}
         </p>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-5">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-0.5 text-xs rounded-full bg-white/5 text-gray-500 border border-white/5"
+              className="px-2 py-0.5 text-xs rounded-full bg-[#dedcd5]/5 text-[#8c9484]/70 border border-[#dedcd5]/5"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        {/* Link */}
         {project.link !== "#" && (
           <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-indigo-400 hover:text-indigo-300 transition-colors font-medium"
+            className="inline-flex items-center gap-2 text-sm text-[#c88a6f] hover:text-[#d89a7f] transition-colors font-medium"
           >
-            {isCode2 ? <Code2 size={15} /> : <ExternalLink size={15} />}
+            {isGithub ? <Code2 size={15} /> : <ExternalLink size={15} />}
             {project.linkLabel}
           </a>
         )}

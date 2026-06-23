@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #f0f0f5;
+  --background: #1d1d1d;
+  --foreground: #dedcd5;
+  --accent: #c88a6f;
+  --secondary: #8c9484;
 }
 
 @theme inline {
@@ -26,15 +28,15 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #1d1d1d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6366f1;
+  background: #c88a6f;
   border-radius: 3px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  background: linear-gradient(135deg, #c88a6f 0%, #dedcd5 60%, #8c9484 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -45,5 +47,5 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 20px 40px rgba(200, 138, 111, 0.1);
 }

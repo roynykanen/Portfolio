@@ -29,15 +29,14 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-10"
         >
-          <span className="text-indigo-400 text-sm font-medium tracking-widest uppercase">
+          <span className="text-[#c88a6f] text-sm font-medium tracking-widest uppercase">
             Projects
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 text-[#dedcd5]">
             What I&apos;ve built
           </h2>
         </motion.div>
 
-        {/* Filter pills */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,8 +50,8 @@ export default function Projects() {
               onClick={() => setActive(f.value)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 active === f.value
-                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/25"
-                  : "bg-white/5 text-gray-400 hover:text-white border border-white/10 hover:border-white/20"
+                  ? "bg-[#c88a6f] text-[#1d1d1d] shadow-lg shadow-[#c88a6f]/20"
+                  : "bg-[#dedcd5]/5 text-[#8c9484] hover:text-[#dedcd5] border border-[#dedcd5]/10 hover:border-[#dedcd5]/20"
               }`}
             >
               {f.label}

@@ -9,17 +9,15 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-purple-600/8 rounded-full blur-[80px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] bg-pink-600/8 rounded-full blur-[80px]" />
-        {/* Grid */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#c88a6f]/8 rounded-full blur-[120px]" />
+        <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-[#8c9484]/6 rounded-full blur-[80px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] bg-[#c88a6f]/5 rounded-full blur-[80px]" />
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.025]"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+              "linear-gradient(rgba(222,220,213,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(222,220,213,0.5) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
@@ -31,7 +29,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-widest uppercase text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 rounded-full">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-medium tracking-widest uppercase text-[#c88a6f] bg-[#c88a6f]/10 border border-[#c88a6f]/20 rounded-full">
             Open to opportunities
           </span>
         </motion.div>
@@ -47,7 +45,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl text-gray-400 mb-4 font-light"
+          className="text-xl md:text-2xl text-[#8c9484] mb-4 font-light"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -56,7 +54,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="text-base md:text-lg text-gray-500 mb-10 max-w-2xl mx-auto leading-relaxed"
+          className="text-base md:text-lg text-[#8c9484]/80 mb-10 max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -73,13 +71,13 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="px-7 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-all duration-200 shadow-lg shadow-indigo-600/25 hover:shadow-indigo-500/40"
+            className="px-7 py-3 rounded-full bg-[#c88a6f] hover:bg-[#b87a5f] text-[#1d1d1d] font-semibold transition-all duration-200 shadow-lg shadow-[#c88a6f]/20 hover:shadow-[#c88a6f]/30"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="px-7 py-3 rounded-full border border-white/10 text-gray-300 hover:text-white hover:border-white/30 transition-all duration-200"
+            className="px-7 py-3 rounded-full border border-[#dedcd5]/15 text-[#dedcd5]/70 hover:text-[#dedcd5] hover:border-[#dedcd5]/30 transition-all duration-200"
           >
             Get in Touch
           </a>
@@ -95,7 +93,7 @@ export default function Hero() {
             href="https://github.com/roynykanen"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2.5 rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all"
+            className="p-2.5 rounded-full border border-[#dedcd5]/10 text-[#8c9484] hover:text-[#dedcd5] hover:border-[#dedcd5]/25 transition-all"
           >
             <FaGithub size={18} />
           </a>
@@ -103,24 +101,16 @@ export default function Hero() {
             href="https://www.linkedin.com/in/roynykanen/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2.5 rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all"
+            className="p-2.5 rounded-full border border-[#dedcd5]/10 text-[#8c9484] hover:text-[#dedcd5] hover:border-[#dedcd5]/25 transition-all"
           >
             <FaLinkedin size={18} />
-          </a>
-          <a
-            href="https://www.theseus.fi/handle/10024/915194"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all"
-          >
-            <FileText size={18} />
           </a>
         </motion.div>
       </div>
 
       <motion.a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-600 hover:text-gray-400 transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#8c9484]/50 hover:text-[#8c9484] transition-colors"
         animate={{ y: [0, 6, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >

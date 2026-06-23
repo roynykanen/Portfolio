@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0a0f]/90 backdrop-blur-md border-b border-white/5 shadow-lg shadow-black/20"
+          ? "bg-[#1d1d1d]/90 backdrop-blur-md border-b border-[#dedcd5]/5 shadow-lg shadow-black/30"
           : "bg-transparent"
       }`}
     >
@@ -27,13 +27,12 @@ export default function Navbar() {
           Roy Nykänen
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-sm text-[#8c9484] hover:text-[#dedcd5] transition-colors duration-200"
             >
               {l}
             </a>
@@ -42,30 +41,28 @@ export default function Navbar() {
             href="https://github.com/roynykanen"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-2 rounded-full bg-indigo-600/20 border border-indigo-500/30 text-indigo-300 hover:bg-indigo-600/40 transition-all duration-200"
+            className="text-sm px-4 py-2 rounded-full bg-[#c88a6f]/10 border border-[#c88a6f]/30 text-[#c88a6f] hover:bg-[#c88a6f]/20 transition-all duration-200"
           >
             GitHub
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-gray-400 hover:text-white"
+          className="md:hidden text-[#8c9484] hover:text-[#dedcd5]"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#0a0a0f]/95 backdrop-blur-md border-b border-white/5 px-6 pb-6 pt-2 flex flex-col gap-4">
+        <div className="md:hidden bg-[#1d1d1d]/95 backdrop-blur-md border-b border-[#dedcd5]/5 px-6 pb-6 pt-2 flex flex-col gap-4">
           {links.map((l) => (
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
               onClick={() => setOpen(false)}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-[#8c9484] hover:text-[#dedcd5] transition-colors"
             >
               {l}
             </a>
