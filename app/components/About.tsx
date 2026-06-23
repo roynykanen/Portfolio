@@ -54,9 +54,6 @@ export default function About() {
                 className="object-cover"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
-              <div className="absolute inset-0 flex items-center justify-center text-[#8c9484]/30 text-5xl select-none">
-                👤
-              </div>
             </div>
           </motion.div>
 
