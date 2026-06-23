@@ -1,16 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
-import { Code2, Link, FileText, Mail } from "lucide-react";
+import { FileText } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const links = [
   {
-    icon: Code2,
+    icon: FaGithub,
     label: "GitHub",
     value: "@roynykanen",
     href: "https://github.com/roynykanen",
   },
   {
-    icon: Link,
+    icon: FaLinkedin,
     label: "LinkedIn",
     value: "Roy Nykänen",
     href: "https://www.linkedin.com/in/roynykanen/",
@@ -51,15 +52,17 @@ export default function Contact() {
           >
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               I&apos;m currently open to new opportunities. Whether you have a
-              project in mind, a question, or just want to say hi — my inbox is
-              always open.
+              project in mind, a question, or just want to say hi — feel free
+              to reach out on LinkedIn.
             </p>
             <a
-              href="mailto:28lar00@gmail.com"
-              className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-all duration-200 shadow-lg shadow-indigo-600/25 hover:shadow-indigo-500/40"
+              href="https://www.linkedin.com/in/roynykanen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#0A66C2] hover:bg-[#0958a8] text-white font-medium transition-all duration-200 shadow-lg shadow-[#0A66C2]/25 hover:shadow-[#0A66C2]/40"
             >
-              <Mail size={18} />
-              Say Hello
+              <FaLinkedin size={18} />
+              Connect on LinkedIn
             </a>
           </motion.div>
 

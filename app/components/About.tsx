@@ -61,7 +61,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <MapPin size={18} className="text-indigo-400 shrink-0" />
-                <span>Finland</span>
+                <span>Vantaa, Finland</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
                 <Lightbulb size={18} className="text-indigo-400 shrink-0" />

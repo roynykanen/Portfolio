@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowDown, Code2, Link, FileText } from "lucide-react";
+import { ArrowDown, FileText } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -96,7 +97,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="p-2.5 rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all"
           >
-            <Code2 size={18} />
+            <FaGithub size={18} />
           </a>
           <a
             href="https://www.linkedin.com/in/roynykanen/"
@@ -104,7 +105,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="p-2.5 rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all"
           >
-            <Link size={18} />
+            <FaLinkedin size={18} />
           </a>
           <a
             href="https://www.theseus.fi/handle/10024/915194"

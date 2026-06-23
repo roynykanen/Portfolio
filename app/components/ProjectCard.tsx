@@ -5,10 +5,10 @@ import { ExternalLink, Code2 } from "lucide-react";
 import type { Project } from "../data/projects";
 
 const categoryColors: Record<Project["category"], string> = {
-  mobile: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
-  web: "text-blue-400 bg-blue-500/10 border-blue-500/20",
-  ux: "text-purple-400 bg-purple-500/10 border-purple-500/20",
-  other: "text-amber-400 bg-amber-500/10 border-amber-500/20",
+  mobile: "text-emerald-300 bg-emerald-950/80 border-emerald-700/50",
+  web: "text-blue-300 bg-blue-950/80 border-blue-700/50",
+  ux: "text-purple-300 bg-purple-950/80 border-purple-700/50",
+  other: "text-amber-300 bg-amber-950/80 border-amber-700/50",
 };
 
 const categoryLabels: Record<Project["category"], string> = {
