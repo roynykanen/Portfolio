@@ -8,7 +8,7 @@ const categoryColors: Record<Project["category"], string> = {
   mobile: "text-[#4a5245] bg-[#1a1e19] border-[#4a5245]/60",
   web: "text-[#7a3f28] bg-[#1e0d06] border-[#7a3f28]/60",
   ux: "text-[#5c5a55] bg-[#181715] border-[#5c5a55]/50",
-  other: "text-[#8c9484]/70 bg-[#8c9484]/8 border-[#8c9484]/20",
+  other: "text-[#4e5449] bg-[#191c18] border-[#4e5449]/50",
 };
 
 const categoryLabels: Record<Project["category"], string> = {
