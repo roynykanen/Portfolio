@@ -5,9 +5,9 @@ import { ExternalLink, Code2 } from "lucide-react";
 import type { Project } from "../data/projects";
 
 const categoryColors: Record<Project["category"], string> = {
-  mobile: "text-[#5a6154] bg-[#2a2e29] border-[#5a6154]/50",
-  web: "text-[#9a5a3f] bg-[#2d1a10] border-[#9a5a3f]/50",
-  ux: "text-[#7a7870] bg-[#252422] border-[#7a7870]/40",
+  mobile: "text-[#4a5245] bg-[#1a1e19] border-[#4a5245]/60",
+  web: "text-[#7a3f28] bg-[#1e0d06] border-[#7a3f28]/60",
+  ux: "text-[#5c5a55] bg-[#181715] border-[#5c5a55]/50",
   other: "text-[#8c9484]/70 bg-[#8c9484]/8 border-[#8c9484]/20",
 };
 
